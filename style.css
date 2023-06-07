@@ -1,0 +1,664 @@
+:root {
+  --DarkBlue: hsl(233, 26%, 24%);
+  --LimeGreen: hsl(136, 65%, 51%);
+  --BrightCyan: hsl(192, 70%, 51%);
+
+  --GrayishBlue: hsl(233, 8%, 62%);
+  --LightGrayishBlue: hsl(220, 16%, 96%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Public Sans", sans-serif;
+}
+body {
+  min-height: 100vh;
+
+  font-size: 1.8rem;
+}
+
+header {
+  padding: 2.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--White);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 200;
+}
+
+.headerTwo {
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
+/********** Pop Up *********/
+
+.popUpBg {
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  min-height: 100vh;
+  width: 100%;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(255, 255, 255, 0.3)
+  );
+
+  z-index: 100;
+}
+
+.popUp {
+  position: absolute;
+  top: 10rem;
+  left: 2.4rem;
+  right: 2.4rem;
+
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+
+  border-radius: 8px;
+  background: #fff;
+}
+
+.popUp a {
+  text-decoration: none;
+
+  font-weight: 400;
+  font-size: 1.8rem;
+  letter-spacing: -0.14px;
+
+  color: var(--DarkBlue);
+}
+
+.mobileHeaderImages {
+  margin-top: 6rem;
+}
+
+.mobileHeroImg {
+  background: url(./images/bg-intro-mobile.svg) no-repeat;
+  background-size: cover;
+
+  width: 100%;
+  height: 36rem;
+}
+
+.mobileHeroImgPhones {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: url(./images/image-mockups.png) no-repeat;
+  background-size: cover;
+  width: 32.7rem;
+  height: 40.2rem;
+}
+
+/******** Hero Text  *********/
+.heroText {
+  margin-top: 4rem;
+  padding: 0 2.4rem;
+  text-align: center;
+}
+
+.heroText h1 {
+  margin-bottom: 1.6rem;
+
+  font-weight: 300;
+  font-size: 4rem;
+  letter-spacing: -0.71px;
+}
+
+.heroText p {
+  margin-bottom: 3.2rem;
+
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 25px;
+  letter-spacing: -0.23px;
+}
+
+/********* Button *********/
+button {
+  margin-bottom: 8.8rem;
+  padding: 1.2rem 3.4rem;
+  border-radius: 2.2rem;
+  border: none;
+
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0;
+
+  background: linear-gradient(
+    to bottom right,
+    var(--LimeGreen),
+    var(--BrightCyan)
+  );
+  color: var(--White);
+
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(
+    to bottom right,
+
+    rgba(49, 211, 92, 0.4),
+    rgba(43, 183, 218, 0.4)
+  );
+  color: var(--White);
+}
+
+/******** Why Choose  *******/
+.whyChoose {
+  padding: 6.4rem 2.4rem;
+  text-align: center;
+
+  background-color: var(--VeryLightGray);
+}
+
+.whyChoose .topText {
+  margin-bottom: 5.6rem;
+}
+
+.whyChoose .topText > h1 {
+  margin-bottom: 1.4rem;
+
+  font-weight: 300;
+  font-size: 3.2rem;
+  letter-spacing: -0.57px;
+}
+
+.whyChoose .topText > p {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 25px;
+  letter-spacing: -0.23px;
+}
+
+/******* Why Choose CONTAINER  ********/
+.whyChooseContainer {
+}
+
+.reasonBox {
+  margin-bottom: 3.2rem;
+}
+
+.reasonBox img {
+  margin-bottom: 2.4rem;
+}
+
+.reasonBox h2 {
+  margin-bottom: 1.6rem;
+
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 28px;
+  letter-spacing: -0.36px;
+}
+
+/******** Latest Articles Section  ********/
+
+.latestArticlesSection {
+  padding: 8.8rem 2.4rem;
+
+  text-align: center;
+}
+
+.latestArticlesSection h1 {
+  margin-bottom: 3.1rem;
+
+  font-weight: 300;
+  font-size: 3.2rem;
+  letter-spacing: -0.57px;
+}
+
+/******** Cards  *******/
+.articleCard {
+  margin-bottom: 2.4rem;
+
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+.articleCard img {
+  width: 100%;
+}
+
+/******* card Text  *******/
+.cardText {
+  padding: 2.4rem 3.1rem;
+  text-align: left;
+}
+
+.cardText h2 {
+  margin-bottom: 0.8rem;
+
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: -0.16px;
+
+  color: var(--GrayishBlue);
+}
+
+.cardText h3 {
+  margin-bottom: 0.8rem;
+
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 20px;
+  letter-spacing: -0.29px;
+
+  cursor: pointer;
+}
+
+.cardText h3:hover {
+  color: var(--LimeGreen);
+}
+
+.cardText p {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 18px;
+  letter-spacing: -0.2px;
+
+  color: var(--GrayishBlue);
+}
+
+/******* FOOTER  ******/
+footer {
+  padding: 4rem 7.8rem;
+
+  text-align: center;
+  background-color: var(--DarkBlue);
+}
+
+.footerLogo {
+  margin-bottom: 3.2rem;
+}
+
+.socials {
+  margin-bottom: 3.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.footerB {
+  margin-bottom: 0.8rem;
+}
+
+.footerC {
+  margin-bottom: 3.2rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.links a {
+  text-decoration: none;
+
+  color: var(--White);
+}
+
+.links a:hover {
+  color: var(--LimeGreen);
+}
+
+footer button {
+  margin-bottom: 2.4rem;
+}
+
+.rightFooter p {
+  color: var(--GrayishBlue);
+}
+
+/******** Desktop  ***********/
+
+@media (min-width: 1400px) {
+  header {
+    display: none;
+  }
+
+  .headerTwo {
+    padding: 0;
+    padding-left: 16.5rem;
+    padding-right: 16.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--White);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 200;
+  }
+
+  .headerLinks a {
+    display: inline-block;
+    padding: 3.2rem 3rem;
+    border-bottom: 4px solid transparent;
+
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: -0.11px;
+
+    text-decoration: none;
+    color: var(--GrayishBlue);
+  }
+
+  .headerLinks a:hover {
+    border-bottom: 4px solid var(--LimeGreen);
+    color: var(--DarkBlue);
+  }
+
+  .headerTwo button {
+    margin-bottom: 0;
+  }
+
+  /* Top Images */
+  .mobileHeaderImages {
+    display: none;
+  }
+
+  .mobileHeroImg {
+    display: none;
+  }
+
+  .mobileHeroImgPhones {
+    display: none;
+  }
+
+  /******** Desktop Images *******/
+  .desktopHeaderImages {
+    margin-top: 8rem;
+
+    position: relative;
+  }
+
+  .desktopHeroImg {
+    background: url(./images/bg-intro-desktop.svg) no-repeat;
+    background-size: cover;
+
+    position: absolute;
+    top: -20rem;
+    right: -45rem;
+    height: 109.5rem;
+    width: 120rem;
+  }
+
+  .desktopHeroImgPhones {
+    position: absolute;
+    top: -10rem;
+    right: -11.5rem;
+
+    background: url(./images/image-mockups.png) no-repeat;
+    background-size: cover;
+    width: 73rem;
+    height: 90rem;
+  }
+
+  /******** Hero Text  *********/
+  .heroText {
+    margin-top: 8rem;
+    padding: 17rem 82.8rem 17rem 16.5rem;
+    text-align: left;
+
+    background-color: var(--VeryLightGray);
+  }
+
+  .heroText h1 {
+    margin-bottom: 2.4rem;
+
+    font-size: 5.6rem;
+    letter-spacing: -0.71px;
+  }
+
+  .heroText p {
+    margin-bottom: 3.6rem;
+
+    font-size: 1.8rem;
+    line-height: 28px;
+    letter-spacing: -0.28px;
+  }
+
+  /******** Why Choose  *******/
+  .whyChoose {
+    padding: 9.5rem 16.5rem;
+    text-align: left;
+
+    background-color: var(--LightGrayishBlue);
+  }
+
+  .whyChoose .topText {
+    margin-bottom: 7.2rem;
+  }
+
+  .whyChoose .topText > h1 {
+    margin-bottom: 1.6rem;
+
+    font-weight: 300;
+    font-size: 4rem;
+    letter-spacing: -0.57px;
+  }
+
+  .whyChoose .topText > p {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 28px;
+    letter-spacing: -0.28px;
+
+    width: 63.5rem;
+  }
+
+  /******* Why Choose CONTAINER  ********/
+  .whyChooseContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3rem;
+  }
+
+  .reasonBox {
+    margin-bottom: 3.2rem;
+  }
+
+  .reasonBox img {
+    margin-bottom: 2.4rem;
+  }
+
+  .reasonBox h2 {
+    margin-bottom: 1.6rem;
+
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 28px;
+    letter-spacing: -0.36px;
+  }
+
+  /******** Latest Articles Section  ********/
+  .articleCardsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3rem;
+  }
+
+  .latestArticlesSection {
+    padding: 8rem 16.5rem;
+
+    text-align: left;
+
+    background-color: var(--VeryLightGray);
+  }
+
+  .latestArticlesSection h1 {
+    margin-bottom: 4rem;
+
+    font-weight: 300;
+    font-size: 4rem;
+    letter-spacing: -0.57px;
+  }
+
+  /******** Cards  *******/
+  .articleCard {
+    margin-bottom: 2.4rem;
+
+    border-radius: 5px;
+    overflow: hidden;
+
+    height: 39.5rem;
+    background-color: var(--White);
+  }
+
+  .articleCard img {
+    height: 20rem;
+    width: 100%;
+  }
+
+  /******* card Text  *******/
+  .cardText {
+    padding: 2.4rem 3.1rem;
+    text-align: left;
+  }
+
+  .cardText h2 {
+    margin-bottom: 0.8rem;
+
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: -0.16px;
+
+    color: var(--GrayishBlue);
+  }
+
+  .cardText h3 {
+    margin-bottom: 0.8rem;
+
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 20px;
+    letter-spacing: -0.29px;
+  }
+
+  .cardText p {
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 18px;
+    letter-spacing: -0.2px;
+
+    color: var(--GrayishBlue);
+  }
+
+  /******* FOOTER  ******/
+  footer {
+    padding: 4.8rem 16.5rem;
+
+    text-align: center;
+    background-color: var(--DarkBlue);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .leftFooter {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    gap: 13.1rem;
+  }
+
+  .rightFooter {
+    text-align: right;
+  }
+
+  .footerLogo {
+    margin-bottom: 3.2rem;
+  }
+
+  .socials {
+    margin-bottom: 3.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+  }
+
+  .footerB {
+    margin-bottom: 0.8rem;
+  }
+
+  .footerC {
+    margin-bottom: 3.2rem;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .links a {
+    text-decoration: none;
+
+    color: var(--White);
+  }
+
+  .links a:hover {
+    color: var(--LimeGreen);
+  }
+
+  footer button {
+    margin-bottom: 2.4rem;
+  }
+
+  .rightFooter p {
+    color: var(--GrayishBlue);
+  }
+}
